@@ -354,6 +354,12 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   background-color: #17a2b8 !important;
 }
 
+/* search bar */
+#search-bar::placeholder {
+  color: black; /* Ganti dengan warna yang diinginkan */
+  opacity: 1; /* Atur opacity jika ingin placeholder lebih jelas */
+}
+
 /*Text Color*/
 .text-white {
   color: #ffffff !important;

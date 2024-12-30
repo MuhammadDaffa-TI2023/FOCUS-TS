@@ -13,4 +13,9 @@ class Dosen extends Model
     {
         return $this->belongsTo(Fakultas::class, 'fakultas_id');
     }
+
+    public function janjitemu()
+    {
+        return $this->hasMany(JanjiTemu::class, 'mahasiswa_id');
+    }
 }

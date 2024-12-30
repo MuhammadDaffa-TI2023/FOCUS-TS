@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Mahasiswa;
 use App\Models\Prodi;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class MahasiswaController extends Controller
 {
@@ -12,9 +13,15 @@ class MahasiswaController extends Controller
     {
         $mahasiswa = Mahasiswa::all();
         $prodi = Prodi::all();
+        $user = Auth::user();
+
+        if($user->hasRole('mahasiswa'))  {
+            return view('role.mahasiswa.index', compact('mahasiswa', 'prodi'));
+        }
 
         return view('mahasiswa.index', compact('mahasiswa', 'prodi'));
     }
+    
 
     public function store(Request $request)
     {

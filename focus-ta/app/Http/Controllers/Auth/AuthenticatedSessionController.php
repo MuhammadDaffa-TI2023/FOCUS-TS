@@ -30,7 +30,7 @@ class AuthenticatedSessionController extends Controller
 
         // Redirect berdasarkan peran
         if (Auth::user()->hasRole('mahasiswa')) {
-            return redirect()->route('index-mahasiswa');
+            return redirect()->route('mahasiswa');
         }
         // Redirect berdasarkan peran
         if (Auth::user()->hasRole('dosen')) {

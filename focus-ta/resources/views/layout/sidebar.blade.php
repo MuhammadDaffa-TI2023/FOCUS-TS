@@ -7,6 +7,9 @@
             <li><a class="text-white" href="{{ route('dashboard-mahasiswa') }}">Mahasiswa</a></li>
             <li><a class="text-white" href="{{ route('dashboard-dosen') }}">Dosen</a></li>
             <li><a class="text-white" href="{{ route('dashboard-mentor') }}">Mentor</a></li>
+            <li><a class="text-white" href="{{ route('dashboard-dokumen') }}">Dokumen</a></li>
+            <li><a class="text-white" href="{{ route('dashboard-janjiTemu') }}">Janji Temu</a></li>
+            <li><a class="text-white" href="{{ route('dashboard-user') }}">Users</a></li>
             
         </ul>
     </nav>
